@@ -7,6 +7,14 @@ body {
 
 /* Estilos para el header */
 header {
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Asegura que el header esté por encima de otros elementos */
+    background-color: #0D6EFD;
+    color: #fff;
+    padding: 50px 1;
+    display: flex;
+    align-items: center;
     background-color: #0D6EFD;
     color: #fff;
     padding: 50px 1;
