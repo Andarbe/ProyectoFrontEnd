@@ -1,0 +1,239 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos para el header */
+header {
+    background-color: #4d64a1;
+    color: #fff;
+    padding: 50px 1;
+    display: flex; /* Utilizamos flexbox para alinear los elementos */
+    align-items: center ; /* Alineamos verticalmente los elementos en el centro */
+}
+
+.logo {
+    float: left;
+    max-width: 100px; /* Establece un ancho máximo para el contenedor del logo */
+}
+
+.logo img {
+    max-width: 100%; /* Hace que la imagen del logo se ajuste al ancho máximo del contenedor */
+    height: auto;
+}
+
+
+/* Estilos para los botones */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center; /* Centra los elementos del menú */
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav ul li:last-child {
+    margin-right: 0; /* Elimina el margen derecho del último elemento */
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 15px; /* Ajusta el espacio alrededor del texto del botón */
+    border: 1px solid #fff; /* Añade un borde al botón */
+    border-radius: 5px; /* Añade bordes redondeados al botón */
+    transition: background-color 0.3s ease; /* Añade una transición suave al color de fondo */
+}
+
+nav ul li a:hover {
+    background-color: #555; /* Cambia el color de fondo al pasar el ratón por encima */
+}
+
+/* Alinea los botones horizontalmente */
+nav ul {
+    display: flex;
+    justify-content: center;
+}
+
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+/* Estilos específicos para las secciones */
+/* Estilos para la sección Hero */
+.hero {
+    background-color: #505869; /* Color de fondo */
+    background-image: url('img/bk.jpg'); /* Ruta de la imagen de fondo */
+    background-size: cover; /* Ajusta la imagen de fondo para cubrir toda la sección */
+    background-position: center; /* Centra la imagen de fondo */
+    color: #fff; /* Color del texto */
+    padding: 100px 0; /* Espaciado interno */
+    text-align: center; /* Alinea el contenido al centro */
+}
+
+/* Estilos para el contenido dentro de la sección Hero */
+.hero-content {
+    max-width: 800px; /* Ancho máximo del contenido */
+    margin: 0 auto; /* Centra el contenido horizontalmente */
+    background-color: rgba(0, 0, 0, 0.5); /* Color de fondo con transparencia para sombreado */
+    padding: 20px; /* Espaciado interno del contenido */
+    border-radius: 10px; /* Bordes redondeados para el contenido */
+}
+
+/* Estilos para el título H1 */
+.hero-content h1 {
+    font-size: 2.5em; /* Tamaño de fuente del título */
+    margin-bottom: 20px; /* Espaciado inferior */
+}
+
+/* Estilos para el párrafo */
+.hero-content p {
+    font-size: 1.2em; /* Tamaño de fuente del párrafo */
+    line-height: 1.5; /* Altura de línea */
+    margin-bottom: 20px; /* Espaciado inferior */
+}
+
+/* Estilos para el botón de llamada a la acción */
+.hero-content .cta-button {
+    display: inline-block; /* Hace que el botón sea un elemento en línea */
+    background-color: #fff; /* Color de fondo del botón */
+    color: #4d64a1; /* Color de texto del botón */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    text-decoration: none; /* Quita el subrayado del enlace */
+    transition: background-color 0.3s ease; /* Transición suave al pasar el ratón por encima */
+}
+
+/* Cambia el color de fondo del botón al pasar el ratón por encima */
+.hero-content .cta-button:hover {
+    background-color: rgba(255, 255, 255, 0.8); /* Cambia el color de fondo con transparencia */
+}
+
+/* Estilos para la sección de categorías */
+.categorias {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px; /* Espacio entre las categorías */
+}
+
+.categoria {
+    flex: 0 0 calc(33.33% - 40px); /* Establece el ancho de cada categoría */
+    max-width: calc(33.33% - 40px);
+}
+
+.card {
+    background-color: #f0f0f0; /* Color de fondo de las tarjetas */
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    transition: background-color 0.3s ease; /* Transición suave al pasar el ratón por encima */
+}
+
+.card:hover {
+    background-color: #e0e0e0; /* Cambia el color de fondo al pasar el ratón por encima */
+}
+
+.card h2 {
+    margin: 0;
+}
+
+/* Estilos para los enlaces dentro de las tarjetas */
+.card a {
+    color: #333; /* Color del texto del enlace */
+    text-decoration: none;
+}
+
+.card a:hover {
+    text-decoration: underline; /* Subrayado al pasar el ratón por encima */
+}
+
+/* Galería de Imágenes */
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    padding: 2rem;
+  }
+  
+  .proyecto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .proyecto img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  
+  .proyecto a {
+    text-decoration: none;
+    color: var(--text-color);
+    margin-top: 0.5rem;
+    font-weight: bold;
+  }
+  
+  .proyecto a:hover {
+    color: var(--tranquil-blue);
+  }
+.registration-form, .contact-form {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    margin-top: 50px;
+}
+
+.registration-form h2, .contact-form h2 {
+    text-align: center;
+}
+
+.registration-form label, .contact-form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.registration-form input[type="text"],
+.registration-form input[type="email"],
+.registration-form input[type="password"],
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.registration-form button, .contact-form button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.registration-form button:hover, .contact-form button:hover {
+    background-color: #555;
+}
