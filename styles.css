@@ -1,8 +1,8 @@
 /* Estilos generales */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+  font-family: "Poppins", sans-serif !important;
 }
 
 /* Estilos para el header */
@@ -74,7 +74,7 @@ footer {
     background-color: #333;
     color: #fff;
     padding: 10px 0;
-    position: fixed;
+    position: relative;
     bottom: 0;
     width: 100%;
     text-align: center;
@@ -132,75 +132,130 @@ footer {
 
 /* Estilos para la sección de categorías */
 .categorias {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 50px; /* Espacio entre las categorías */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Espacio entre las categorías */
 }
 
 .categoria {
-    flex: 0 0 calc(33.33% - 40px); /* Establece el ancho de cada categoría */
-    max-width: calc(33.33% - 40px);
+  flex: 0 0 calc(25% - 20px); /* Establece el ancho de cada categoría */
+  max-width: calc(25% - 20px);
+  margin-bottom: 20px;
 }
 
 .card {
-    background-color: #f0f0f0; /* Color de fondo de las tarjetas */
-    border-radius: 5px;
-    padding: 20px;
-    text-align: center;
-    transition: background-color 0.3s ease; /* Transición suave al pasar el ratón por encima */
+  background-color: #fff; /* Color de fondo de las tarjetas */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease; /* Agrega una transición suave al pasar el ratón por encima */
 }
 
 .card:hover {
-    background-color: #e0e0e0; /* Cambia el color de fondo al pasar el ratón por encima */
+  transform: translateY(-5px); /* Efecto de elevación al pasar el ratón por encima */
 }
 
-.card h2 {
-    margin: 0;
+.card h3 {
+  margin: 0;
+  font-size: 1.2rem; /* Tamaño de fuente del título */
+  color: #333; /* Color del texto del título */
 }
 
-/* Estilos para los enlaces dentro de las tarjetas */
+.card p {
+  font-size: 1rem; /* Tamaño de fuente del párrafo */
+  color: #666; /* Color del texto del párrafo */
+}
+
 .card a {
-    color: #333; /* Color del texto del enlace */
-    text-decoration: none;
+  text-decoration: none;
+  color: #333; /* Color del texto del enlace */
 }
 
-.card a:hover {
-    text-decoration: underline; /* Subrayado al pasar el ratón por encima */
+/* Media query para dispositivos pequeños */
+@media screen and (max-width: 768px) {
+  .categoria {
+    flex-basis: calc(50% - 20px); /* Reducir el ancho de las categorías a la mitad en pantallas pequeñas */
+    max-width: calc(50% - 20px);
+  }
 }
+
+/* Estilos para la barra de proyectos destacados */
+.destacados-barra {
+    background-color: #f2f2f2; /* Color de fondo gris */
+    width: 100%; /* Ancho completo */
+    padding: 10px 0; /* Espaciado interno */
+    text-align: center; /* Alineación del texto al centro */
+}
+
+.destacados-barra p {
+    margin: 0; /* Elimina el margen del párrafo dentro de la barra */
+    font-weight: bold; /* Texto en negrita */
+    color: #333; /* Color del texto */
+}
+
 
 /* Galería de Imágenes */
 
-.galeria {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1rem;
-    padding: 2rem;
-  }
-  
-  .proyecto {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .proyecto img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
+.proyecto img {
+    width: 50%;
+    height: 10px; /* Tamaño fijo para todas las imágenes */
+    object-fit: cover; /* Recorte para mantener la proporción de aspecto */
     border-radius: 5px;
+    transition: transform 0.3s ease; /* Agrega una transición suave */
+}
+
+.proyecto img:hover {
+    transform: scale(1.1); /* Escala la imagen al pasar el mouse */
+}
+
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Utiliza un mínimo de 250px por columna y ajusta automáticamente el número de columnas */
+  gap: 20px; /* Espacio entre las imágenes */
+  padding: 20px; /* Espaciado interior de la galería */
+}
+
+.proyecto {
+  text-align: center; /* Centra el contenido */
+}
+
+.proyecto img {
+  width: 100%; /* Las imágenes ocupan todo el ancho disponible */
+  max-width: 100%; /* Evita que las imágenes se agranden más allá de su tamaño natural */
+  height: auto; /* Mantiene la proporción de aspecto */
+  border-radius: 10px; /* Agrega bordes redondeados */
+}
+
+.proyecto a {
+  display: block; /* Convierte el enlace en un bloque para que ocupe todo el ancho de la imagen */
+  margin-top: 10px; /* Espacio entre la imagen y el enlace */
+  font-size: 1.1rem; /* Tamaño de fuente del enlace */
+  color: #333; /* Color del texto del enlace */
+  text-decoration: none; /* Quita el subrayado del enlace */
+}
+
+/* Media query para dispositivos pequeños */
+@media screen and (max-width: 768px) {
+  .galeria {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Reduce el tamaño mínimo de las columnas */
+    gap: 10px; /* Reduce el espacio entre las imágenes */
+    padding: 10px; /* Reduce el espaciado interior de la galería */
   }
-  
+
+  .proyecto img {
+    border-radius: 5px; /* Reduzca el radio del borde en dispositivos pequeños */
+  }
+
   .proyecto a {
-    text-decoration: none;
-    color: var(--text-color);
-    margin-top: 0.5rem;
-    font-weight: bold;
+    margin-top: 5px; /* Reduzca el espacio entre la imagen y el enlace */
+    font-size: 1rem; /* Reduzca el tamaño de fuente del enlace */
   }
-  
-  .proyecto a:hover {
-    color: var(--tranquil-blue);
-  }
+}
+
+/* Formato para la pagina de registro*/
 .registration-form, .contact-form {
     max-width: 600px;
     margin: auto;

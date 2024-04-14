@@ -22,14 +22,24 @@
                 <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
+        <link rel="stylesheet" href="clock.css">
     </header>
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Bienvenido a nuestra página</h1>
-            <p>Somos una plataforma dedicada a brindarte los mejores servicios. Explora lo que tenemos para ofrecerte y contáctanos si tienes alguna pregunta.</p>
-            <a href="contacto.html" class="cta-button">Contáctanos</a>
+    <div style="height: 100vh; background-image: url(https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80); background-size: cover; background-position: center;" class="position-relative w-100">
+  <div class="position-absolute text-white d-flex flex-column align-items-start justify-content-center" style="top: 0; right: 0; bottom: 0; left: 0; background-color: rgba(0,0,0,.7);">
+    <div class="container">
+      <div class="col-md-6">
+        <span style="color: #bbb;" class="text-uppercase">ANDRES ARBELAEZ</span>
+        <!-- on small screens remove display-4 -->
+        <h1 class="mb-4 mt-2 display-4 font-weight-bold">Ingenieria Informatica <span style="color: #0080ff;">Para Su Negocio</span></h1>
+        <p  style="color: #bbb;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem eos ea, cum quae facilis optio impedit tempora aliquam at eveniet?</p>
+        <div class="mt-5">
+          <!-- hover background-color: white; color: black; -->
+          <a href="#" class="btn px-5 py-3 text-white mt-3 mt-sm-0" style="border-radius: 30px; background-color: #0080FF;">CONTACTENOS</a>
         </div>
-    </section>
+      </div>
+    </div>
+  </div>
+</div>
     <section class="categorias">
         <div class="categoria">
             <a href="url_de_diseno_web.html">
@@ -67,36 +77,44 @@
             </a>
         </div>
     </section>
+    <div class="destacados-barra">
+        <p>Proyectos Destacados</p>
+    </div>
+    
     <section class="galeria">
         <div class="proyecto">
-            <img src="img/proyecto_1.jpg" alt="Proyecto 1">
+            <img src="img/proyecto_1.png" alt="Proyecto 1">
             <a href="proyecto-1.html">Proyecto 1</a>
         </div>
         <div class="proyecto">
-            <img src="img/proyecto_2.jpg" alt="Proyecto 2">
+            <img src="img/proyecto_2.png" alt="Proyecto 2">
             <a href="proyecto-2.html">Proyecto 2</a>
         </div>
         <div class="proyecto">
-            <img src="img/proyecto_3.jpg" alt="Proyecto 3">
+            <img src="img/proyecto_3.png" alt="Proyecto 3">
             <a href="proyecto-3.html">Proyecto 3</a>
         </div>
         <div class="proyecto">
-          <img src="img/proyecto_4.jpg" alt="Proyecto 3">
+          <img src="img/proyecto_4.png" alt="Proyecto 3">
           <a href="proyecto-3.html">Proyecto 4</a>
         </div>
         <div class="proyecto">
-          <img src="img/proyecto_5.jpg" alt="Proyecto 3">
+          <img src="img/proyecto_5.png" alt="Proyecto 3">
           <a href="proyecto-3.html">Proyecto 5</a>
         </div>
         <div class="proyecto">
-          <img src="img/proyecto_6.jpg" alt="Proyecto 3">
+          <img src="img/proyecto_6.png" alt="Proyecto 3">
           <a href="proyecto-3.html">Proyecto 6</a>
         </div>
-        <!-- Añade más proyectos según sea necesario -->
+        <!-- Se pueden añadir más proyectos según sea necesario -->
       </section>
     <footer>
         <p>Información adicional del footer</p>
+        <time class="clock">
+            <span data-clock="time"></span>
+            <span data-clock="date"></span>
+          </time>
     </footer>
-    <script src="script.js"></script>
-</body>
+    <script src="clock.js"></script>
+   </body>
 </html>
